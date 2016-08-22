@@ -1,40 +1,31 @@
-========================================================================
-    CONSOLE APPLICATION : BlackjackGame Project Overview
-========================================================================
+APPROACH TO SOLVING PROBLEM
 
-AppWizard has created this BlackjackGame application for you.
+0. Read the spec first.
 
-This file contains a summary of what you will find in each of the files that
-make up your BlackjackGame application.
+1. First I had to get familiar with the basics of Visual Studio. Solutions, projects, creating classes, etc. Also learning how to read errors in Visual Studio.
 
+2. Next I had to brush up on my C++ skills, such as vectors, and how linking works with #pragma once, etc. This was kind of confusing because I had tried using the "#ifndef FILE_H_" style of header guards I had done before and it wasn't working.
 
-BlackjackGame.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+3. I haven't actually played Blackjack before, so I had to get a feel for how the game works. I played a version online here http://www.247blackjack.com/. I wrote out the steps the player would take in the game so I would know what functions to create. 
 
-BlackjackGame.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+4. Created the Card class and tested it's ability to store and print suit/values. Stores suits and values incase it's reused elsewhere. Values are filled with their defaults for face cards (11, 12, 13). The blackjack file is responsible for overriding facecard values with 10s.
 
-BlackjackGame.cpp
-    This is the main application source file.
+5. Created the Deck class which wraps a vector of Cards. Tested its ability to shuffle and deal. It also takes Card Vectors as hands.
 
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
+6. With the Card and Deck tested and working, I started building the game logic, in three sections: the first four cards dealt, then the player's choice to hit or stand, then the AI's choice to hit or stand. Tested as I went. Used helpers for reading and writing from console since the default way seems messy.
 
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named BlackjackGame.pch and a precompiled types file named StdAfx.obj.
+7. Tested game, plays well. Formatted the console prints. Cleaned up the code and added comments.
 
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
+8. Learned how to create and import DLLs, which was kind of confusing. Used this tutorial https://msdn.microsoft.com/en-us/library/ms235636.aspx
 
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
+9. Refactored main game into its own class instead of just a bunch of functions.
 
-/////////////////////////////////////////////////////////////////////////////
+10. Used Visual Studio to create UML diagrams.
+
+11. Tried to connect Visual Studio to my GitHub though TeamExplorer, but it didn't work so I used the GitHub GUI program. You should be able to find it here: https://github.com/RiceRichardJ/Blackjack
+
+12. Updated this Readme file.
+
+This project was created in Visual Studio 2013.
+
+To compile: Open up the .sln solution file in Visual Studio, and build the BlackjackGame and DeckLib projects. Pressing Ctrl+F5 should run it hopefully.
