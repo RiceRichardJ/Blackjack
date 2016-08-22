@@ -24,8 +24,8 @@ APPROACH TO SOLVING PROBLEM
 
 11. Tried to connect Visual Studio to my GitHub though TeamExplorer, but it didn't work so I used the GitHub GUI program. You should be able to find it here: https://github.com/RiceRichardJ/Blackjack
 
-12. Updated this Readme file.
+12. Updated this Readme file. Removed unnecessary files to reduce size, removed debug and exe files to allow this project to be zipped and sent through email.
 
 This project was created in Visual Studio 2013.
 
-To compile: Open up the .sln solution file in Visual Studio, and build the BlackjackGame and DeckLib projects. Pressing Ctrl+F5 should run it hopefully.
+To compile: Open up the BlackjackTestRVT.sln solution file in Visual Studio, and build the BlackjackGame and DeckLib projects. Pressing Ctrl+F5 should run it hopefully.
